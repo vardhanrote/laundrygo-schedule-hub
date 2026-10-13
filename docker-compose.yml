@@ -1,0 +1,9 @@
+# OPTIONAL: run LaundryGo with Docker Compose on EC2
+#   docker compose up -d --build
+services:
+  web:
+    build: .
+    container_name: laundrygo
+    ports:
+      - "80:80"
+    restart: unless-stopped
